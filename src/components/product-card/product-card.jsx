@@ -10,7 +10,7 @@ export const ProductCard = (props) => {
         <h1 className="carInfo">{name}</h1>
         <h2 className="carInfo">{price}</h2>
         <div id ="button-container">
-          <CallToAction type="Primary" text="View"/>
+          <CallToAction type="Primary" text="Learn More"/>
           <CallToAction type="Primary" text="Order Now" />
         </div>
       </div>
