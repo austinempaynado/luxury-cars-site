@@ -1,0 +1,12 @@
+.Primary{
+    border: none;
+    padding: 1rem 2.2rem 1rem 2.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-weight: bold;
+    border-radius: 0.2rem;
+}
+
+.Primary:hover{
+    opacity: 0.8;
+}

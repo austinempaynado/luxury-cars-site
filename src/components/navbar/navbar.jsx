@@ -7,7 +7,7 @@ export const NavBar = () => {
     <div id="nav-bar-container">
       <div id="nav-wrapper">
         <img src={logo} id="logo" />
-        <div id="button-container">
+        <div id="nav-button-container">
           <button className="button">Login</button>
           <button className="button">Cart</button>
         </div>
