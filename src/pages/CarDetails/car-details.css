@@ -1,4 +1,9 @@
-.details-page {
+#details-page-container{
+display: flex;
+flex-direction: column;
+}
+
+.overview {
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -24,12 +29,31 @@
   padding-bottom: 25rem;
 }
 
-.back-container {
-  display: flex;
-  align-items: center;
-  padding-top: 1.2rem;
+
+#features-heading{
+    margin-left: 10rem;
+    margin-top: 3rem;
+}
+#features-container{
+    display: flex;
+    margin: 4rem 10rem 5rem 10rem;
 }
 
-#back-button {
-  margin-right: 1rem;
+.feature-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33%;
+}
+
+.features-text{
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+}
+
+.feature-icon{
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 2rem;
 }

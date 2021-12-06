@@ -41,6 +41,9 @@ export const Homepage = (props) => {
         {cars.map((car) => (
           <ProductCard
             className="product-card"
+            feature1={car.Feature1.stringValue}
+            feature2={car.Feature2.stringValue}
+            feature3={car.Feature3.stringValue}
             name={car.Name.stringValue}
             image={car.Image.stringValue}
             price={car.Price.stringValue}

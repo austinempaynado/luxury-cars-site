@@ -2,14 +2,7 @@ import "./product-card.css";
 import { Link } from "react-router-dom";
 
 export const ProductCard = (props) => {
-  const { image, name, price, id } = props;
-
-  const car = {
-    image,
-    name,
-    price,
-    id,
-  };
+  const { image, name, price, id} = props;
 
   return (
     <div id="card" style={{ backgroundImage: `url(${image})` }}>
