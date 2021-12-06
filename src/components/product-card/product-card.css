@@ -9,7 +9,7 @@
 }
 
 #card:hover{
-    background-size: 175%;
+    background-size: 160%;
     transition-duration: 0.8s;
 }
 
@@ -24,7 +24,7 @@
 
 .carInfo{
     color: white;
-    text-shadow:2px 3px 20px black;
+    text-shadow:1px 1px 20px black;
 }
 
 #button-container{
