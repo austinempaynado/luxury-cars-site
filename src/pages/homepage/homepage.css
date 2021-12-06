@@ -1,5 +1,8 @@
 #products-list{
     display: flex;
+    flex-wrap: wrap;
+    flex-basis: 33.336%;
+    padding-top: 7.4rem;
 }
 
 

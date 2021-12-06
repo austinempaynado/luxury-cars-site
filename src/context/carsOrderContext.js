@@ -1,15 +1,25 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
-const carsOrderContext = React.createContext({
-    //storing the cars from firebase
-    cars: [],
-    order: [],
-    initializeCars: () =>{},
-    addCarToOrder: ()  =>{},
-    removeCarFromOrder:()=>{},
-    viewedCar: 'none'
+const CarsContext = React.createContext({
+  //storing the cars from firebase API
+  cars: [],
+  initializeCars: () => {},
 });
 
-export const CarsOrderContextProvider = (props) => {
+export const CarsContextProvider = (props) => {
+  const [cars, setCars] = useState([]);
 
-}
+  const initializeCars = (carsAPI) => {
+    setCars(carsAPI);
+  };
+
+  return (
+    <CarsContext.Provider
+      value={{ cars: cars, initializeCars: initializeCars }}
+    >
+      {props.children}
+    </CarsContext.Provider>
+  );
+};
+
+export default CarsContext;

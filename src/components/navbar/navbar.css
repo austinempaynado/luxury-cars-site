@@ -5,6 +5,7 @@
 
 #nav-bar-container {
 
+  position: fixed;
   width: 100%;
   z-index: 10000;
 }
@@ -27,17 +28,29 @@
   margin-right: 1rem;
 }
 
-.button {
+.nav-link {
+  position:relative;
   cursor: pointer;
-  padding: 1rem;
-  margin-right: 1rem;
-  font-family: Cinzel;
   font-size: 1.2rem;
-  border: 0;
-  background: 0;
+  margin-right: 2rem;
+  padding-bottom: 0.3rem;
   color: black;
 }
 
-.button:hover {
-  opacity: 0.6;
+.nav-link:after{
+  content:" ";
+  position: absolute;
+  width: 100%;
+  transform:scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;    
+}
+
+.nav-link:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }

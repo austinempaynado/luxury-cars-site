@@ -1,0 +1,35 @@
+.details-page {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.details-text {
+  color: white;
+  margin-left: 4rem;
+}
+
+#car-title {
+  padding-top: 14rem;
+  font-size: 4rem;
+}
+
+#overview {
+  margin-top: 4rem;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+#description {
+  width: 40%;
+  padding-bottom: 25rem;
+}
+
+.back-container {
+  display: flex;
+  align-items: center;
+  padding-top: 1.2rem;
+}
+
+#back-button {
+  margin-right: 1rem;
+}

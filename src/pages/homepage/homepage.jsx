@@ -1,10 +1,13 @@
 import { ProductCard } from "../../components/product-card/product-card";
 import "./homepage.css";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import CarsContext from "../../context/carsOrderContext";
 
 export const Homepage = (props) => {
   const [cars, setCars] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const globalState = useContext(CarsContext);
 
   useEffect(() => {
     getCars();
@@ -17,14 +20,15 @@ export const Homepage = (props) => {
         "https://firestore.googleapis.com/v1/projects/luxury-cars-284a3/databases/(default)/documents/cars/"
       );
       const data = await response.json();
-      console.log(data);
-      setLoading(false);
 
       const formattedData = data.documents.map((item) => {
         return item.fields;
       });
 
+      // console.log(formattedData);
       setCars(formattedData);
+      setLoading(false);
+      globalState.initializeCars(formattedData);
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -36,15 +40,18 @@ export const Homepage = (props) => {
       <div id="products-list">
         {cars.map((car) => (
           <ProductCard
+            className="product-card"
             name={car.Name.stringValue}
             image={car.Image.stringValue}
             price={car.Price.stringValue}
+            key={car.Id.stringValue}
+            id={car.Id.stringValue}
           />
         ))}
       </div>
       {loading && (
         <div id="ring-container">
-          <div class="loading-ring"></div>
+          <div className="loading-ring"></div>
         </div>
       )}
     </div>
