@@ -1,6 +1,6 @@
 import "./car-details.css";
 import CarsContext from "../../context/carsOrderContext";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaRegCompass } from "react-icons/fa";
@@ -53,6 +53,10 @@ export const CarDetailsPage = (props) => {
       </div>
     );
   } else {
-    return <p>Error finding car.</p>;
+    return (
+      <p id="error-message">
+        Error finding car. Go back to <Link to="/" className="showroom">Showroom.</Link>
+      </p>
+    );
   }
 };

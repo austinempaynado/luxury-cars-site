@@ -1,11 +1,13 @@
 import "./product-card.css";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 export const ProductCard = (props) => {
-  const { image, name, price, id} = props;
+  const { image, name, price, id } = props;
+
+  const history = useHistory();
 
   return (
-    <div id="card" style={{ backgroundImage: `url(${image})` }}>
+    <div id="card" style={{ backgroundImage: `url(${image})` }} onClick={()=>{history.push(`/car/${id}`)}}>
       <div id="car-info-container">
         <h1 className="carInfo">{name}</h1>
         <h2 className="carInfo">{price}</h2>
